@@ -1,0 +1,10 @@
+<web-app>
+    <servlet>
+        <servlet-name>std</servlet-name>
+        <servlet-class>student</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>std</servlet-name>
+        <url-pattern>/std</url-pattern>
+    </servlet-mapping>
+</web-app>
