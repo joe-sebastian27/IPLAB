@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            LOGIN FORM
+        </title>
+        <script language="javascript">
+            function validate()
+            {
+                var usr= /^[a-zA-Z0-9]{3,20}$/;
+                var psd=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9_]).{8,20}$/;
+                var pnam=document.forms["loginform"]["pname"].value;
+                var pwd=document.forms["loginform"]["pswd"].value;  
+                if(pnam=="")
+                {
+                    alert("Enter username");
+                    return false;
+                }
+                else if(pwd=="")
+                {
+                    alert("Enter password");
+                    return false;
+                }
+                else if (!usr.test(pnam))
+                {
+                    alert("Enter a valid username");
+                    return false;
+                }
+                else if(!psd.test(pwd))
+                {
+                    alert("Enter valid password");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor="lightblue">
+        <form name="loginform">
+        <div align="center" >
+            <h style = " font-size:1cm; font-family: 'Algerian', Times, serif; color: rgb(90, 44, 255); ">LOGIN FORM</h><br/><br/>
+            USERNAME : <input type="text" placeholder="Enter username" name="pname"><br/><br/>
+            PASSWORD : <input type="password" placeholder="Enter password" name="pswd"><br/><br/>
+        </div>
+        <div align="center">
+            <input type="submit" value="login" onClick="return validate()">
+        </div>
+    </form>
+    </body>
+</html>
