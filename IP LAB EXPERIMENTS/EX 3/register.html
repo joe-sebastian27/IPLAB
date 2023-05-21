@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        REGISTER PAGE
+    </title>
+
+    <script language="javascript">
+        function validate() {
+            if (document.myform.uname.value == "" && document.myform.pwd.value == "" && document.myform.name.value == "" && document.myform.phno.value == "" &&
+                document.myform.email.value == "" && document.myform.dob.value == "" && document.myform.bid.value == "" && document.myform.bname.value == "") {
+                alert("Enter all Details");
+                return false;
+            } else if (document.myform.uname.value == "") {
+                alert("Please enter user name");
+                return false;
+            } else if (document.myform.name.value == "") {
+                alert("Please enter your name");
+                return false;
+            } else if (document.myform.pwd.value == "") {
+                alert("Please enter password");
+                return false;
+            } else if (document.myform.pwd.length < 8) {
+                alert("Password must be atleast 8 characters!");
+                return false;
+            } else if (document.myform.dob.value == "") {
+                alert("Please enter your date of birth");
+                return false;
+            } else if (document.myform.email.value == "") {
+                alert("Please enter your email");
+                return false;
+            } else if (document.myform.phno.value == "") {
+                alert("Please enter your phonr number");
+                return false;
+            } else if (document.myform.bid.value == "") {
+                alert("Please enter biker's id");
+                return false;
+            } else if (document.myform.bname.value == "") {
+                alert("Please enter your bike name");
+                return false;
+            } else {
+                alert("All Datas are added:)");
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: rgb(241, 156, 219);">
+    <center>
+        <h style=" font-size:1.5cm; font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(5, 5, 5); ">Welcome to Registration page</h><br/><br/></center>
+    <table align="center" style="color: rgb(241, 156, 219); font-size:0.5cm; font-family: 'Comic Sans MS';width: 13cm;" bgcolor="black">
+        <form name="myform">
+            <tr>
+                <td><b>USER_NAME:</b></td>
+                <td><input type="text" placeholder="Enter your username" name="uname"></td>
+            </tr>
+            <tr>
+                <td><b>NAME:</b></td>
+                <td><input type="text" placeholder="Enter your name" name="name"></td>
+            </tr>
+            <tr>
+                <td><b>PASSWORD:</b></td>
+                <td><input type="password" placeholder="create your password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td><b> DOB:</b></td>
+                <td><input type="date" placeholder="Enter your DOB" name="dob"></td>
+            </tr>
+            <tr>
+                <td><b>EMAIL:</b></td>
+                <td><input type="email" placeholder="enter your email" name="email"></td>
+            </tr>
+            <tr>
+                <td><b>PHONE_NO:</b></td>
+                <td><input type="number" placeholder="enter your phone number" name="phno"></td>
+            </tr>
+            <tr>
+                <td><b> FOOTBALLER_ID:</b></td>
+                <td><input type="number" placeholder="enter your Footballer's id" name="bid"></td>
+            </tr>
+            <tr>
+                <td><b>TEAM_NAME:</b></td>
+                <td><input type="text" placeholder="Enter your Team name" name="bname"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="ok" onclick="validate()"></td>
+                <td><input type="reset" value="clear"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-image: url(i.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <title>
+        LOGIN FORM
+    </title>
+    <script language="javascript">
+        function validate() {
+            var f = 1;
+            if (document.loginform.id.value == "" || document.loginform.pwd.value == "") {
+                f = 0;
+            }
+
+            if (f == 1) {
+                alert("Valid Input");
+            } else {
+                alert("No Input Entered Please Enter Datas!!");
+                document.form.focus();
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h style=" font-size:1.5cm; font-family: 'MV Boli', Courier, monospace; color: rgb(48, 47, 42); ">Welcome to Login page</h><br/><br/></center>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <table align="center" style="color: rgba(187, 33, 187, 0.555); font-size:0.5cm; font-family: 'Comic Sans MS';" bgcolor="pink">
+        <form name="loginform">
+            <tr>
+                <td><b>User Name:</b></td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td><b>Password:</b></td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit" onclick="validate()">
+                </td>
+                <td>
+                    <input type="reset" value="Reset">
+                </td>
+                <td>
+                    <input type="button" value="Register" onClick="window.location.href='register.html';">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

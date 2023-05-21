@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detials</title>
+    <style>
+        h1 {
+            font-size: 1.5cm;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(15, 15, 15);
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(241, 156, 219);align-content: center;">
+    <script lang="javascript">
+        function validate() {
+            var f1 = 1,
+                f2 = 1,
+                f3 = 1;
+            if (document.myform.id.value == "" && document.myform.pwd.value == "" && document.myform.add.value == "" && document.myform.num.value == "" && document.myform.uname.value == "") {
+                f3 = 0;
+            }
+            if (document.myform.uname.value == "") {
+                f1 = 0;
+            }
+            if (document.myform.pwd.value == "") {
+                f2 = 0;
+            }
+            if (f3 == 0) {
+                alert("No datas entered!! Please Enter Datas");
+                document.myform.focus();
+            } else if (f2 == 0) {
+                alert("Please enter password!!");
+                document.myform.focus();
+            } else if (f1 == 0) {
+                alert("Please enter Name!!");
+                document.myform.focus();
+            } else if (f1 == 1) {
+                alert("Valid Input");
+                document.myform.focus();
+            }
+        }
+    </script>
+    <h1><b><center>Welcome to User Detials Page</center></b></h1>
+    <table align="center" style="color: rgb(241, 156, 219); font-size:0.5cm; font-family: 'Comic Sans MS';width:12cm ;height:7cm ;" bgcolor="black">
+        <form name="myform">
+            <tr>
+                <td><b>Name:</b></td>
+                <td><input type="text" name="id"></td>
+            </tr>
+            <tr>
+                <td><b>Address:</b></td>
+                <td><input type="text" name="add"></td>
+            </tr>
+            <tr>
+                <td><b>MobileNo:</b></td>
+                <td><input type="number" name="num"></td>
+            </tr>
+            <tr>
+                <td><b>UserName:</b></td>
+                <td><input type="text" name="uname"></td>
+            </tr>
+            <tr>
+                <td><b>Password:</b></td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="ok" onclick="validate()"></td>
+                <td><input type="reset" value="clear"></td>
+            </tr>
+    </table>
+</body>
+
+</html>
